@@ -12,6 +12,14 @@ const navbarList: { title: string; href: string }[] = [
         title: "Home",
         href: "/",
     },
+    {
+        title: "News",
+        href: "/news",
+    },
+    {
+        title: "Artikel",
+        href: "/article",
+    },
 ]
 
 export function Navbar() {
