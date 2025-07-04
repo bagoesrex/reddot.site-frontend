@@ -4,7 +4,7 @@ import { Navbar } from "./navbar"
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md">
+        <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md">
             <div className="mx-4 border-b-1 border-black">
                 <div className="flex flex-row justify-between items-center px-4">
                     <div className="overflow-hidden">
