@@ -4,9 +4,9 @@ import { Navbar } from "./navbar"
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 shadow-md border-b-1 border-black">
+        <header className="sticky top-0 z-50 mx-4 border-b-1 border-black">
             <div className="flex flex-row justify-between items-center px-7">
-                <div className="overflow-hidden ">
+                <div className="overflow-hidden">
                     <img src="/logo.svg" alt="Logo Website" className="h-17 w-auto fill-blue-700" />
                 </div>
                 <Navbar />
