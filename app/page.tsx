@@ -4,10 +4,11 @@ import Image from "next/image";
 import Icon from "@/public/ai-icon.webp";
 import { motion } from "framer-motion";
 import { HomeCard } from "@/components/home/home-card";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col text-gray-950">
       <section id="hero" className="flex flex-col md:flex-row min-h-svh bg-gradient-to-tr from-rose-400 to-red-400 justify-center items-center gap-2 pb-16 pt-[120px]">
         <div className="max-w-xl text-center md:text-left px-5">
           <motion.h1
@@ -23,10 +24,21 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-md md:text-xl mt-4 text-gray-700"
+            className="text-md md:text-xl mt-4"
           >
             Platform edukasi untuk memahami kecerdasan buatan secara menyeluruh dan mudah diakses semua orang.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="mt-6 hidden md:flex justify-center md:justify-start gap-4"
+          >
+            <Button asChild className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600" size={"lg"}>
+              <a href="#">Get Started</a>
+            </Button>
+          </motion.div>
         </div>
 
         <motion.div
@@ -43,6 +55,15 @@ export default function Home() {
             className="object-contain"
             priority
           />
+          <div className="mt-4 flex justify-center items-center md:hidden">
+            <Button
+              asChild
+              className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
+              size="lg"
+            >
+              <a href="#">Get Started</a>
+            </Button>
+          </div>
         </motion.div>
       </section>
 
