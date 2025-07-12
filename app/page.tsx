@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { HomeCard } from "@/components/home/about-card";
 import { Button } from "@/components/ui/button";
 import WhyCard from "@/components/home/why-card";
+import CategoryCard from "@/components/home/category-card";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -68,8 +70,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <section id="about" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center">
-        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight py-10">
+      <section id="about" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-10">
+        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mb-7">
           Tentang
         </h1>
         <div className="flex flex-row gap-10 max-w-4xl md:text-left px-5 bg-gray-200 items-center">
@@ -84,8 +86,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center">
-        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mt-10 mb-2">
+      <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-400 items-center pb-15 pt-10">
+        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mb-2">
           Kenapa Belajar AI di Reddot
         </h1>
         <h2 className="bg-gray-300 rounded-xl py-1 px-2 mb-10">
@@ -94,6 +96,23 @@ export default function Home() {
         <div className="flex max-w-4x">
           <WhyCard />
         </div>
+      </section>
+
+      <section id="category" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-10">
+        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mb-2">
+          Kategori Pembelajaran
+        </h1>
+        <h2 className="bg-gray-300 rounded-xl py-1 px-2 mb-10">
+          Jelajahi Berbagai Materi Pembelajaran
+        </h2>
+        <div className="flex max-w-4xl">
+          <CategoryCard />
+        </div>
+        <Link href="/" className="pt-10">
+          <Button className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600" size={"lg"}>
+            Mulai Belajar
+          </Button>
+        </Link>
       </section>
     </main>
   );
