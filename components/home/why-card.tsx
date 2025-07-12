@@ -1,7 +1,14 @@
 import { Card, CardContent } from "../ui/card"
 import { Search, Brain, BookOpenCheck, Users } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 
-const WhyList = [
+interface WhyItem {
+    icon: LucideIcon
+    title: string
+    description: string
+}
+
+const WhyList: WhyItem[] = [
     {
         icon: Search,
         title: "Materi Mudah Dipahami",
@@ -30,13 +37,13 @@ const WhyList = [
 
 export default function WhyCard() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
             {WhyList.map((item, index) => {
                 const Icon = item.icon
                 return (
                     <Card
                         key={index}
-                        className="bg-white/60 rounded-xl shadow-md w-full max-w-md"
+                        className="bg-white/60 rounded-xl shadow-md w-full max-w-md hover:shadow-lg transition"
                     >
                         <CardContent className="p-6">
                             <div className="mb-4 text-red-600">
