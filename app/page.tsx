@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Icon from "@/public/ai-icon.webp";
 import { motion } from "framer-motion";
-import { HomeCard } from "@/components/home/home-card";
+import { HomeCard } from "@/components/home/about-card";
 import { Button } from "@/components/ui/button";
+import WhyCard from "@/components/home/why-card";
 
 export default function Home() {
   return (
@@ -80,6 +81,18 @@ export default function Home() {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore eligendi ullam aliquid tenetur qui veritatis inventore culpa quia. Non temporibus natus autem corrupti amet eligendi, molestiae sed a ducimus harum!
               Veniam consectetur ullam incidunt dignissimos, recusandae quidem nihil illo repudiandae repellendus qui neque cupiditate labore in ducimus impedit aliquam sit, eum iure cumque? Quibusdam sit unde voluptatum molestias, eum sed.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center">
+        <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mt-10 mb-2">
+          Kenapa Belajar AI di Reddot
+        </h1>
+        <h2 className="bg-gray-300 rounded-xl py-1 px-2 mb-10">
+          Platform AI yang Ramah untuk Semua
+        </h2>
+        <div className="flex max-w-4x">
+          <WhyCard />
         </div>
       </section>
     </main>
