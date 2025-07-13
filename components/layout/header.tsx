@@ -20,7 +20,7 @@ export default function Header() {
                 </div>
 
                 {isOpen && (
-                    <div className="mt-4 flex flex-col gap-3 animate-fadeDown">
+                    <div className="mb-2 flex flex-col gap-3 animate-fadeDown">
                         <Navbar.MobileMenu setIsOpen={setIsOpen} />
                     </div>
                 )}
