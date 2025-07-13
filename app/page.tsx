@@ -10,11 +10,12 @@ import CategoryCard from "@/components/home/category-card";
 import Link from "next/link";
 import { dummyNews } from "@/data/dummyNews";
 import { NewsCard } from "@/components/news/news-card";
+import HeroAnimation from "@/components/home/hero-animation";
 
 export default function Home() {
   return (
     <main className="flex flex-col text-gray-950">
-      <section id="hero" className="flex flex-col md:flex-row min-h-svh bg-gradient-to-tr from-rose-400 to-red-400 justify-center items-center gap-2 pb-16 pt-[120px]">
+      <section id="hero" className="flex flex-col md:flex-row min-h-svh justify-center items-center gap-2 pb-16 pt-[120px]">
         <div className="max-w-xl text-center md:text-left px-5">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -52,14 +53,7 @@ export default function Home() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
         >
-          <Image
-            src={Icon}
-            alt="AI Icon"
-            width={300}
-            height={300}
-            className="object-contain"
-            priority
-          />
+          <HeroAnimation />
           <div className="mt-4 flex justify-center items-center md:hidden">
             <Button
               asChild
