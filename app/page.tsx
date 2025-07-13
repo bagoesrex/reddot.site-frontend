@@ -95,11 +95,11 @@ export default function Home() {
         </Button>
       </section>
 
-      <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-400 items-center pb-15 pt-10">
+      <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-rose-200 items-center pb-15 pt-10">
         <h1 className="text-2xl md:text-4xl font-extrabold drop-shadow-md leading-tight mb-2">
           Kenapa Belajar AI di Reddot
         </h1>
-        <h2 className="bg-gray-300 rounded-xl py-1 px-2 mb-10">
+        <h2 className="bg-red-400 rounded-xl py-1 px-2 mb-10 text-white">
           Platform AI yang Ramah untuk Semua
         </h2>
         <div className="flex max-w-4x">
