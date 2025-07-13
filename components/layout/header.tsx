@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Navbar } from "./navbar"
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
             <div className="mx-4 border-b-1 border-black">
                 <div className="flex flex-row justify-between items-center px-4">
                     <div className="overflow-hidden">
-                        <img src="/logo.svg" alt="Logo Website" className="h-17 w-auto fill-blue-700" />
+                        <Image src="/logo.svg" alt="Logo Website" className="h-17 w-auto fill-blue-700" />
                     </div>
                     <Navbar />
                 </div>

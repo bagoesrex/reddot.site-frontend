@@ -1,32 +1,39 @@
-import { dummyNews } from "@/data/dummyNews"
-import { notFound } from "next/navigation"
-import Image from "next/image"
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import { dummyNews } from "@/data/dummyNews";
 
-type Props = {
-    params: { slug: string }
-}
+export default async function NewsDetailPage({
+    params,
+}: {
+    params: Promise<{ slug: string }>
+}) {
 
-export default function NewsDetailPage({ params }: Props) {
-    const news = dummyNews.find((item) => item.slug === params.slug)
+    const { slug } = await params
+    const news = dummyNews.find((item) => item.slug === slug);
 
-    if (!news) return notFound()
+    if (!news) return notFound();
 
     return (
-        <article className="max-w-3xl mx-auto px-4 py-16 pb-16 pt-[100px]">
-            <h1 className="text-3xl font-bold mb-4">{news.title}</h1>
-            <p className="text-sm text-gray-500 mb-4">Dipublikasikan: {news.publishedAt}</p>
-            {news.imageUrl && (
-                <Image
-                    src={news.imageUrl}
-                    alt={news.title}
-                    width={400}
-                    height={400}
-                    className="w-full h-64 object-cover rounded-lg mb-6"
-                />
-            )}
-            <div className="text-base leading-relaxed text-gray-800">
-                {news.content}
-            </div>
-        </article>
-    )
+        <main className="flex flex-col items-center px-4 py-24 min-h-svh bg-white">
+            <article className="max-w-3xl w-full">
+                <h1 className="text-4xl font-bold mb-4">{news.title}</h1>
+
+                {news.imageUrl && (
+                    <div className="w-full h-64 relative mb-6">
+                        <Image
+                            src={news.imageUrl}
+                            alt={news.title}
+                            fill
+                            className="object-cover rounded-xl"
+                            priority
+                        />
+                    </div>
+                )}
+
+                <div className="prose prose-lg max-w-none text-gray-800">
+                    <p>{news.content}</p>
+                </div>
+            </article>
+        </main>
+    );
 }
