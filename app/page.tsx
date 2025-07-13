@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Icon from "@/public/ai-icon.webp";
 import { motion } from "framer-motion";
 import { HomeCard } from "@/components/home/about-card";
 import { Button } from "@/components/ui/button";
@@ -15,7 +13,7 @@ import HeroAnimation from "@/components/home/hero-animation";
 export default function Home() {
   return (
     <main className="flex flex-col text-gray-950">
-      <section id="hero" className="flex flex-col md:flex-row min-h-svh justify-center items-center gap-2 pb-16 pt-[120px]">
+      <section id="hero" className="flex flex-col md:flex-row min-h-svh justify-center bg-rose-200 items-center gap-2 pb-16 pt-[120px]">
         <div className="max-w-xl text-center md:text-left px-5">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -74,12 +72,27 @@ export default function Home() {
           <div className="flex-1/2 p-4 bg-red-300 rounded-3xl h-fit">
             <HomeCard />
           </div>
-          <div className="flex-1/2">
-            <h1 className="text-center">Test</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore eligendi ullam aliquid tenetur qui veritatis inventore culpa quia. Non temporibus natus autem corrupti amet eligendi, molestiae sed a ducimus harum!
-              Veniam consectetur ullam incidunt dignissimos, recusandae quidem nihil illo repudiandae repellendus qui neque cupiditate labore in ducimus impedit aliquam sit, eum iure cumque? Quibusdam sit unde voluptatum molestias, eum sed.</p>
+          <div className="flex-1/2 space-y-5">
+            <h2 className="text-2xl font-bold text-gray-900">Apa Itu Reddot ?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              <strong>Reddot</strong> merupakan platform edukasi yang dibuat oleh <strong>Reddot Community</strong> untuk mengedukasi masyarakat tentang kecerdasan buatan (<em>AI</em>) secara <strong>gratis</strong>, mudah dipahami, dan terbuka untuk semua kalangan.
+            </p>
           </div>
         </div>
+        <div className="flex flex-row gap-10 max-w-4xl md:text-left px-5 bg-gray-200 items-center pt-10">
+          <div className="flex-1/2 space-y-5">
+            <h2 className="text-2xl font-bold text-gray-900">Apa Itu Reddot Community ?</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              <strong>Reddot Community</strong> adalah komunitas terbuka yang berfokus pada pengembangan, kolaborasi, dan penyebaran edukasi seputar <em>Artificial Intelligence (AI)</em>. Komunitas ini mendorong pembelajaran bersama, berbagi sumber daya, dan membangun masa depan AI yang inklusif di Indonesia.
+            </p>
+          </div>
+          <div className="flex-1/2 p-4 bg-red-300 rounded-3xl h-fit">
+            <HomeCard />
+          </div>
+        </div>
+        <Button asChild className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600 mt-10" size={"lg"}>
+          <a href="#">Learn more about us</a>
+        </Button>
       </section>
 
       <section id="why" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-400 items-center pb-15 pt-10">
