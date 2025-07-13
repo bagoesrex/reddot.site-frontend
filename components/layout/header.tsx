@@ -6,11 +6,11 @@ import { Navbar } from "./navbar"
 
 export default function Header() {
     return (
-        <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md">
-            <div className="mx-4 border-b-1 border-black">
+        <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md shadow-sm">
+            <div className="mx-auto max-w-4xl">
                 <div className="flex flex-row justify-between items-center px-4">
                     <div className="overflow-hidden">
-                        <Image src={Icon} alt="Logo Website" className="h-17 w-auto fill-blue-700" />
+                        <Image src={Icon} alt="Logo Website" className="h-14 w-auto fill-red-700" />
                     </div>
                     <Navbar />
                 </div>
