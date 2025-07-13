@@ -125,3 +125,22 @@
 .heading-main {
   @apply text-4xl md:text-5xl font-extrabold leading-tight;
 }
+
+body.menu-open {
+  overflow: hidden;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeDown {
+  animation: fadeDown 0.25s ease-out forwards;
+}
