@@ -4,7 +4,7 @@ import { HomeCard } from "./about-card";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-10 px-5">
+        <section id="about" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-20 px-5">
             <h2 className="text-2xl md:text-3xl font-extrabold leading-tight mb-10">
                 Tentang
             </h2>
@@ -44,7 +44,7 @@ export default function AboutSection() {
                     </p>
                 </div>
             </div>
-            <Link href={"/"}>
+            <Link href={"/about"}>
                 <Button className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600 mt-10" size={"lg"}>
                     Learn more about us
                 </Button>

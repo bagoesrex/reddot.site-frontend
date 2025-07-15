@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import HeroAnimation from "./hero-animation";
-import Link from "next/link";
 
 export default function HeroSection() {
     return (
@@ -33,11 +32,18 @@ export default function HeroSection() {
                     transition={{ duration: 1, delay: 0.4 }}
                     className="mt-6 hidden md:flex justify-center md:justify-start gap-4"
                 >
-                    <Link href={"/"}>
-                        <Button className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600" size={"lg"}>
-                            Get Started
-                        </Button>
-                    </Link>
+                    <Button
+                        onClick={() => {
+                            const section = document.getElementById("about");
+                            if (section) {
+                                section.scrollIntoView();
+                            }
+                        }}
+                        className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
+                        size={"lg"}
+                    >
+                        Get Started
+                    </Button>
                 </motion.div>
             </div>
 
@@ -48,15 +54,6 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             >
                 <HeroAnimation />
-                <div className="mt-4 flex justify-center items-center md:hidden">
-                    <Button
-                        asChild
-                        className="mt-5 md:mt-0 bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
-                        size="lg"
-                    >
-                        <a href="#">Get Started</a>
-                    </Button>
-                </div>
             </motion.div>
         </section>
     )

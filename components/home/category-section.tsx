@@ -14,7 +14,7 @@ export default function CategorySection() {
             <div className="flex max-w-4xl">
                 <CategoryCard />
             </div>
-            <Link href="/" className="pt-15">
+            <Link href="https://learn.reddot.site" className="pt-15">
                 <Button className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600" size={"lg"}>
                     Mulai Belajar
                 </Button>
