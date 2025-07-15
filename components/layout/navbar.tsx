@@ -10,7 +10,7 @@ const navbarList: { title: string; href: string }[] = [
     { title: "News", href: "/news" },
     { title: "Artikel", href: "/article" },
     { title: "About", href: "/about" },
-    { title: "E-Learning", href: "/learning" },
+    { title: "E-Learning", href: "https://learn.reddot.site" },
 ];
 
 type NavbarProps = {
@@ -27,7 +27,7 @@ export function Navbar({ isOpen, setIsOpen }: NavbarProps) {
                         <NavbarList key={href} href={href}>
                             <span className="flex items-center gap-1 justify-center">
                                 {title}
-                                {title === "E-Learning" && <ArrowUpRight size={14} />}
+                                {title === "E-Learning" && <ArrowUpRight className="hover:text-red-600" size={14} />}
                             </span>
                         </NavbarList>
                     ))}
@@ -59,7 +59,7 @@ Navbar.MobileMenu = function MobileMenu({ setIsOpen }: { setIsOpen: (open: boole
                 >
                     <span className="flex items-center gap-1">
                         {title}
-                        {title === "E-Learning" && <ArrowUpRight size={14} />}
+                        {title === "E-Learning" && <ArrowUpRight className="hover:text-red-600" size={14} />}
                     </span>
                 </Link>
             ))}
