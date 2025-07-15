@@ -34,7 +34,7 @@ export default function CategoryCard() {
                 return (
                     <Card
                         key={index}
-                        className="bg-white/70 w-full max-w-md rounded-xl shadow-md hover:shadow-lg transition"
+                        className="bg-white/60 w-full max-w-md rounded-xl shadow-md hover:shadow-lg transition"
                     >
                         <CardContent className="p-6 space-y-4">
                             <div className="text-red-600">

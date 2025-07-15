@@ -19,9 +19,9 @@ export default function AboutSection() {
                     </p>
                 </div>
 
-                <div className="w-full md:w-1/2">
-                    <div className="bg-red-300 rounded-3xl p-4 shadow-md h-full">
-                        <HomeCard />
+                <div className="w-100 md:w-1/2">
+                    <div className="rounded-3xl p-4 h-full">
+                        <HomeCard href="/logo.svg" cover={false} />
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export default function AboutSection() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl w-full mt-14">
                 <div className="w-full md:w-1/2">
                     <div className="bg-red-300 rounded-3xl p-4 shadow-md h-full">
-                        <HomeCard />
+                        <HomeCard href="/us.webp" cover={true} />
                     </div>
                 </div>
 
