@@ -19,7 +19,7 @@ export default function AboutSection() {
                     </p>
                 </div>
 
-                <div className="w-100 md:w-1/2">
+                <div className="w-full px-30 md:w-1/2 md:px-10">
                     <div className="rounded-3xl p-4 h-full">
                         <HomeCard href="/logo.svg" cover={false} />
                     </div>

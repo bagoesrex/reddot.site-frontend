@@ -30,7 +30,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.4 }}
-                    className="mt-6 hidden md:flex justify-center md:justify-start gap-4"
+                    className="mt-8 hidden md:flex justify-center md:justify-start gap-4"
                 >
                     <Button
                         onClick={() => {
@@ -54,6 +54,20 @@ export default function HeroSection() {
                 transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             >
                 <HeroAnimation />
+                <div className="mt-4 flex justify-center items-center md:hidden">
+                    <Button
+                        onClick={() => {
+                            const section = document.getElementById("about");
+                            if (section) {
+                                section.scrollIntoView();
+                            }
+                        }}
+                        className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
+                        size={"lg"}
+                    >
+                        Get Started
+                    </Button>
+                </div>
             </motion.div>
         </section>
     )
