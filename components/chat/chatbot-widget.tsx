@@ -8,6 +8,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 import { fetchGeminiResponse } from "@/lib/gemini";
+import { Skeleton } from "../ui/skeleton";
 
 type Message = {
     sender: "user" | "bot";
@@ -18,6 +19,7 @@ export default function ChatbotWidget() {
     const [open, setOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const bottomRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -32,12 +34,14 @@ export default function ChatbotWidget() {
         const userMessage: Message = { sender: "user", text: input.trim() };
         setMessages((prev) => [...prev, userMessage]);
         setInput("");
+        setIsLoading(true);
 
         const prompt = `${input.trim()}. Jawab secara singkat dalam 1 sampai 2 kalimat saja.`;
         const botText = await fetchGeminiResponse(prompt);
         const botResponse: Message = { sender: "bot", text: botText };
 
         setMessages((prev) => [...prev, botResponse]);
+        setIsLoading(false);
     };
 
     return (
@@ -101,6 +105,18 @@ export default function ChatbotWidget() {
                                             </div>
                                         </div>
                                     ))}
+
+                                    {isLoading && (
+                                        <div className="flex flex-row items-start gap-2">
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-xs text-muted-foreground border-2 border-primary">
+                                                <Bot className="w-4 h-4 text-primary" />
+                                            </div>
+                                            <div className="flex flex-col gap-1 px-3 py-2 rounded-lg text-sm max-w-[75%] w-full bg-muted">
+                                                <Skeleton className="h-3 w-[90%] rounded bg-gray-400" />
+                                                <Skeleton className="h-3 w-[60%] rounded bg-gray-300" />
+                                            </div>
+                                        </div>
+                                    )}
 
                                     <div ref={bottomRef} />
                                 </div>
