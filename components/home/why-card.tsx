@@ -43,14 +43,14 @@ export default function WhyCard() {
                 return (
                     <Card
                         key={index}
-                        className="bg-white/60 rounded-xl w-full max-w-md shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-transform duration-300 hover:shadow-red-500 hover:scale-[1.02] group p-0"
+                        className="bg-white/60 rounded-xl w-full max-w-md shadow-[0_0_5px_rgba(239,68,68,0.4)] transition-transform duration-300 hover:shadow-red-500 hover:scale-[1.02] hover:ring-2 hover:ring-primary group p-0"
                     >
-                        <CardContent className="p-6">
-                            <div className="mb-4 text-red-600 transition-colors duration-300 group-hover:text-red-800">
+                        <CardContent className="p-6 bg-">
+                            <div className="mb-4 text-red-600 transition-colors duration-300">
                                 <Icon className="w-8 h-8" />
                             </div>
 
-                            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-red-700 transition-colors duration-300">
+                            <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300">
                                 {item.title}
                             </h3>
 

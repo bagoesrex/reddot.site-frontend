@@ -16,7 +16,7 @@ export default function NewsPage() {
 
     return (
         <main className="flex flex-col text-gray-950">
-            <section className="flex flex-col  min-h-svh bg-rose-200 gap-10 pb-15 pt-[80px] px-5">
+            <section className="flex flex-col  min-h-svh gap-10 pb-15 pt-[80px] px-5">
                 <div className="max-w-4xl w-full mx-auto">
                     <h2 className="text-3xl text-left font-extrabold leading-tight mb-2">
                         Berita Terbaru

@@ -21,14 +21,14 @@ export default function AboutSection() {
 
                 <div className="w-full px-30 md:w-1/2 md:px-10">
                     <div className="rounded-3xl p-4 h-full">
-                        <HomeCard href="/logo.svg" cover={false} />
+                        <HomeCard href="/logo-red.svg" cover={false} />
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl w-full mt-14">
                 <div className="w-full md:w-1/2">
-                    <div className="bg-red-300 rounded-3xl p-4 shadow-md h-full">
+                    <div className="bg-primary/70 rounded-3xl p-4 shadow-md h-full">
                         <HomeCard href="/us.webp" cover={true} />
                     </div>
                 </div>

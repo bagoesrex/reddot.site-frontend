@@ -10,8 +10,8 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md shadow-sm">
-            <div className="mx-auto max-w-4xl px-4 transition-all duration-300 flex flex-col">
+        <header className="fixed top-0 z-50 w-full bg-primary/70 backdrop-blur-md shadow-sm">
+            <div className="mx-auto max-w-4xl px-4 transition-all duration-300 flex flex-col text-white">
                 <div className="flex items-center justify-between">
                     <Link href={"/"}>
                         <div className="relative h-14 flex justify-center items-center w-20 overflow-hidden">

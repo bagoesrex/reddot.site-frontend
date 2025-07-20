@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer
             aria-label="Site Footer"
-            className="flex flex-col items-center bg-gradient-to-tr from-rose-400 to-red-400 text-black py-12 px-6"
+            className="flex flex-col items-center bg-primary/80 text-white py-12 px-6"
         >
             <div className="w-full max-w-4xl flex flex-wrap gap-8">
                 <div className="w-full md:w-6/12">

@@ -27,7 +27,7 @@ export function Navbar({ isOpen, setIsOpen }: NavbarProps) {
                         <NavbarList key={href} href={href}>
                             <span className="flex items-center gap-1 justify-center">
                                 {title}
-                                {title === "E-Learning" && <ArrowUpRight className="hover:text-red-600" size={14} />}
+                                {title === "E-Learning" && <ArrowUpRight className="hover:text-black" size={14} />}
                             </span>
                         </NavbarList>
                     ))}
@@ -55,11 +55,11 @@ Navbar.MobileMenu = function MobileMenu({ setIsOpen }: { setIsOpen: (open: boole
                     key={href}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className="px-4 py-2 text-sm font-medium text-black hover:text-red-600 transition"
+                    className="px-4 py-2 text-sm font-medium text-white hover:text-black transition"
                 >
                     <span className="flex items-center gap-1">
                         {title}
-                        {title === "E-Learning" && <ArrowUpRight className="hover:text-red-600" size={14} />}
+                        {title === "E-Learning" && <ArrowUpRight className="hover:text-black" size={14} />}
                     </span>
                 </Link>
             ))}
