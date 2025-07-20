@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
-import { chatbotResponses } from "@/data/chatbot-responses";
+import { fetchGeminiResponse } from "@/lib/gemini";
 
 type Message = {
     sender: "user" | "bot";
@@ -26,29 +26,18 @@ export default function ChatbotWidget() {
         }
     }, [messages]);
 
-    const handleSend = () => {
+    const handleSend = async () => {
         if (!input.trim()) return;
 
         const userMessage: Message = { sender: "user", text: input.trim() };
-        const botResponse: Message = {
-            sender: "bot",
-            text: generateResponse(input),
-        };
-
-        setMessages((prev) => [...prev, userMessage, botResponse]);
+        setMessages((prev) => [...prev, userMessage]);
         setInput("");
-    };
 
-    const generateResponse = (text: string): string => {
-        const lower = text.toLowerCase();
+        const prompt = `${input.trim()}. Jawab secara singkat dalam 1 sampai 2 kalimat saja.`;
+        const botText = await fetchGeminiResponse(prompt);
+        const botResponse: Message = { sender: "bot", text: botText };
 
-        for (const { keywords, response } of chatbotResponses) {
-            if (keywords.some((k) => lower.includes(k))) {
-                return response;
-            }
-        }
-
-        return "Terima kasih! Jawaban saya masih terbatas karena fitur ini sedang dalam tahap pengembangan.";
+        setMessages((prev) => [...prev, botResponse]);
     };
 
     return (
