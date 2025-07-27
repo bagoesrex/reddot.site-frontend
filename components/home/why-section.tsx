@@ -2,6 +2,7 @@ import Link from "next/link";
 import WhyCard from "./why-card";
 import Image from "next/image"
 import { Button } from "../ui/button";
+import { ChevronRight } from "lucide-react";
 
 export default function WhySection() {
     return (
@@ -26,8 +27,9 @@ export default function WhySection() {
             </div>
 
             <Link href="https://learn.reddot.site" className="pt-15">
-                <Button className="bg-primary/80 hover:bg-transparent border-2 border-primary/80 hover:text-primary/80" size={"lg"}>
+                <Button className="group bg-primary/80 hover:bg-transparent border-2 border-primary/80 hover:text-primary/80" size={"lg"}>
                     Mulai Belajar
+                    <span className="group-hover:ml-3 transition-all"><ChevronRight /></span>
                 </Button>
             </Link>
         </section>

@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { HomeCard } from "./about-card";
 import PatternBackground from "../shared/pattern-background";
 import Image from "next/image"
+import { ChevronRight } from "lucide-react";
 
 export default function AboutSection() {
     return (
@@ -62,8 +63,9 @@ export default function AboutSection() {
                 </div>
             </div>
             <Link href={"/about"}>
-                <Button className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600 mt-10" size={"lg"}>
+                <Button className="group bg-primary/80 hover:bg-transparent border-2 border-primary/80 hover:text-primary/80 mt-10" size={"lg"}>
                     Learn more about us
+                    <span className="group-hover:ml-3 transition-all"><ChevronRight /></span>
                 </Button>
             </Link>
         </section>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import HeroAnimation from "./hero-animation";
+import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
     return (
@@ -14,7 +15,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="heading-main"
                 >
-                    Awali Perjalanan AI-mu di <span className="text-red-600">Reddot</span>
+                    Awali Perjalanan AI-mu di <span className="text-primary/80">Reddot</span>
                 </motion.h1>
 
                 <motion.p
@@ -39,10 +40,11 @@ export default function HeroSection() {
                                 section.scrollIntoView();
                             }
                         }}
-                        className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
+                        className="group bg-primary/80 hover:bg-transparent border-2 border-primary/80 hover:text-primary/80"
                         size={"lg"}
                     >
                         Get Started
+                        <span className="group-hover:ml-3 transition-all"><ChevronDown /></span>
                     </Button>
                 </motion.div>
             </div>
@@ -62,10 +64,11 @@ export default function HeroSection() {
                                 section.scrollIntoView();
                             }
                         }}
-                        className="bg-red-600 hover:bg-transparent border-2 border-red-600 hover:text-red-600"
+                        className="group bg-primary/80 hover:bg-transparent border-2 border-primary/80 hover:text-primary/80"
                         size={"lg"}
                     >
                         Get Started
+                        <span className="group-hover:ml-3 transition-all"><ChevronDown /></span>
                     </Button>
                 </div>
             </motion.div>

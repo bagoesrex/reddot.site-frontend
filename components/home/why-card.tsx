@@ -38,7 +38,6 @@ export default function WhyCard() {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center">
             {WhyList.map((item, index) => {
-                const Icon = item.icon;
                 return (
                     <Card
                         key={index}
