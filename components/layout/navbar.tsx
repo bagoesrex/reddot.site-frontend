@@ -62,7 +62,7 @@ export function Navbar({ isOpen, setIsOpen }: NavbarProps) {
                     className="p-2"
                     aria-label="Toggle menu"
                 >
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isOpen ? <X size={24} color="white" /> : <Menu size={24} color="white" />}
                 </button>
             </div>
         </>
