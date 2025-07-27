@@ -6,7 +6,7 @@ import { Article } from "@/types/article";
 import { useState } from "react";
 
 export default function ArticlesPage() {
-    const [search, setSearch] = useState("");
+    const [search] = useState("");
 
     const filteredArticles = dummyArticles.filter((item: Article) =>
         item.title.toLowerCase().includes(search.toLowerCase()) ||

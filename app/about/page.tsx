@@ -1,7 +1,9 @@
+import TitleSection from "@/components/about/title-section";
+
 export default function AboutPage() {
     return (
-        <main className="h-[80vh] w-full flex justify-center items-center">
-            <h1>About Page</h1>
+        <main className="w-full flex justify-center items-center pb-20">
+            <TitleSection />
         </main>
     );
 }
