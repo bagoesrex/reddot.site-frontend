@@ -10,7 +10,7 @@ type Props = {
 
 export function ArticleCard({ article }: Props) {
     return (
-        <Link href={`/news/${article.slug}`} className="group">
+        <Link href={`/articles/${article.slug}`} className="group">
             <Card className="py-0 rounded-2xl overflow-hidden border border-gray-300 gap-0 bg-white/60 hover:shadow-lg transition-all duration-300 transform hover:rounded-bl-none hover:ring-2 hover:ring-red-600 hover:-translate-y-1">
                 {article.imageUrl && (
                     <Image
