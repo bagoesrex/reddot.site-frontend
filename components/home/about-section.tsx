@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { HomeCard } from "./about-card";
+import PatternBackground from "../shared/pattern-background";
+import Image from "next/image"
 
 export default function AboutSection() {
     return (
-        <section id="about" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-20 px-5">
+        <section id="about" className="relative flex overflow-hidden flex-col md:flex-col min-h-[26rem] items-center pb-15 pt-20 px-5">
+            <PatternBackground />
             <h2 className="text-2xl md:text-3xl font-extrabold leading-tight mb-10">
                 Tentang
             </h2>
@@ -28,7 +31,21 @@ export default function AboutSection() {
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl w-full mt-14">
                 <div className="w-full md:w-1/2">
-                    <div className="bg-primary/70 rounded-3xl p-4 shadow-md h-full">
+                    <div className="rounded-3xl p-4 h-full relative">
+                        <Image
+                            src="/illustrations/album.svg"
+                            alt={"Album icon"}
+                            width={60}
+                            height={60}
+                            className="absolute -top-3 right-0 z-10 rotate-[8deg]"
+                        />
+                        <Image
+                            src="/illustrations/chat.svg"
+                            alt={"Dot icon"}
+                            width={60}
+                            height={60}
+                            className="absolute bottom-0 left-0 z-10 rotate-[-8deg]"
+                        />
                         <HomeCard href="/us.webp" cover={true} />
                     </div>
                 </div>

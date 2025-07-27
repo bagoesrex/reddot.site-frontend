@@ -135,6 +135,7 @@ body.menu-open {
     opacity: 0;
     transform: translateY(-0.25rem);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -143,4 +144,11 @@ body.menu-open {
 
 .animate-fadeDown {
   animation: fadeDown 0.25s ease-out forwards;
+}
+
+.pattern-background {
+  background-color: rgba(214,214,214,0.957);
+  opacity: 1;
+  background-image:  linear-gradient(#e7e7e7 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #e7e7e7 1.4000000000000001px, rgba(214,214,214,0.957) 1.4000000000000001px);
+  background-size: 28px 28px;
 }

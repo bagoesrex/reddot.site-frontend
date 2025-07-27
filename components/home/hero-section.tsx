@@ -6,7 +6,7 @@ import HeroAnimation from "./hero-animation";
 
 export default function HeroSection() {
     return (
-        <section id="hero" className="flex flex-col md:flex-row min-h-svh justify-center items-center gap-2 pb-15 pt-[100px] md:pt-[120px]">
+        <section id="hero" className="flex flex-col md:flex-row min-h-dvh justify-center items-center gap-2 bg-background pb-15 pt-[100px] md:pt-[120px]">
             <div className="max-w-xl text-center md:text-left px-5">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}

@@ -8,7 +8,7 @@ type Props = {
 
 export function HomeCard({ href, cover }: Props) {
     return (
-        <Card className="w-full aspect-[16/9] overflow-hidden rounded-xl bg-transparent border-none shadow-none py-0">
+        <Card className={`${cover ? "rotate-[-1deg]" : "rotate-[3deg]"} w-full aspect-[16/9] overflow-hidden rounded-xl bg-transparent border-none shadow-none py-0`}>
             <div className="relative h-full w-full">
                 <Image
                     src={href}
