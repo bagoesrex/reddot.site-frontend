@@ -1,34 +1,33 @@
 import { Card, CardContent } from "../ui/card"
-import { Search, Brain, BookOpenCheck, Users } from "lucide-react"
-import { LucideIcon } from "lucide-react"
+import Image from "next/image";
 
 interface WhyItem {
-    icon: LucideIcon
+    icon: string
     title: string
     description: string
 }
 
 const WhyList: WhyItem[] = [
     {
-        icon: Search,
+        icon: "/lottie/easy.png",
         title: "Materi Mudah Dipahami",
         description:
             "Konten disusun secara sistematis dan dilengkapi ilustrasi agar mudah dimengerti pemula.",
     },
     {
-        icon: Brain,
+        icon: "/lottie/brain.png",
         title: "Fokus pada Pemahaman Konsep",
         description:
             "Kami tidak hanya mengajarkan teori, tetapi juga membantu kamu memahami konsep AI secara menyeluruh.",
     },
     {
-        icon: BookOpenCheck,
+        icon: "/lottie/24.png",
         title: "Belajar Mandiri Kapan Saja",
         description:
             "Platform ini bisa diakses 24/7 tanpa batas waktu. Kamu bisa belajar sesuai ritme sendiri.",
     },
     {
-        icon: Users,
+        icon: "/lottie/community.png",
         title: "Komunitas Aktif",
         description:
             "Bergabunglah dengan komunitas kami untuk diskusi, kolaborasi, dan bertumbuh bersama.",
@@ -43,20 +42,22 @@ export default function WhyCard() {
                 return (
                     <Card
                         key={index}
-                        className="bg-white/60 rounded-xl w-full max-w-md shadow-[0_0_5px_rgba(239,68,68,0.4)] transition-transform duration-300 hover:shadow-red-500 hover:scale-[1.02] hover:ring-2 hover:ring-primary group p-0"
+                        className="bg-transparent border-none shadow-none rounded-xl w-full max-w-md transition-transform duration-300 hover:scale-[1.02] hover:ring-1 hover:ring-primary group p-0"
                     >
-                        <CardContent className="p-6 bg-">
-                            <div className="mb-4 text-red-600 transition-colors duration-300">
-                                <Icon className="w-8 h-8" />
+                        <CardContent className="p-6 flex flex-row gap-7">
+                            <div className="flex justify-center items-center w-40">
+                                <Image src={item.icon} alt={item.title} width={90} height={90} />
                             </div>
 
-                            <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300">
-                                {item.title}
-                            </h3>
+                            <div className="flex flex-col">
+                                <h3 className="text-lg font-semibold text-gray-800 transition-colors duration-300">
+                                    {item.title}
+                                </h3>
 
-                            <p className="mt-2 text-sm text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
-                                {item.description}
-                            </p>
+                                <p className="mt-2 text-sm text-gray-700 group-hover:text-gray-900 transition-colors duration-300">
+                                    {item.description}
+                                </p>
+                            </div>
                         </CardContent>
                     </Card>
                 );

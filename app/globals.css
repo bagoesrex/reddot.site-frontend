@@ -51,7 +51,7 @@
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.147 0.004 49.25);
-  --primary: rgb(209, 0, 0);
+  --primary: #FF0000;
   --primary-foreground: oklch(0.985 0.001 106.423);
   --secondary: oklch(0.97 0.001 106.424);
   --secondary-foreground: oklch(0.216 0.006 56.043);
@@ -147,8 +147,8 @@ body.menu-open {
 }
 
 .pattern-background {
-  background-color: rgba(214,214,214,0.957);
+  background-color: rgba(214, 214, 214, 0.957);
   opacity: 1;
-  background-image:  linear-gradient(#e7e7e7 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #e7e7e7 1.4000000000000001px, rgba(214,214,214,0.957) 1.4000000000000001px);
+  background-image: linear-gradient(#e7e7e7 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(to right, #e7e7e7 1.4000000000000001px, rgba(214, 214, 214, 0.957) 1.4000000000000001px);
   background-size: 28px 28px;
 }

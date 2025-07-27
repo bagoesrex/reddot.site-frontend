@@ -1,7 +1,6 @@
 import HeroSection from "@/components/home/hero-section";
 import AboutSection from "@/components/home/about-section";
 import WhySection from "@/components/home/why-section";
-import CategorySection from "@/components/home/category-section";
 
 export default function Home() {
   return (
@@ -13,7 +12,7 @@ export default function Home() {
 
       <WhySection />
 
-      <CategorySection />
+      {/* <CategorySection /> */}
 
       {/* <NewsSection /> */}
     </main>
