@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 const navbarList: { title: string; href: string }[] = [
     { title: "Home", href: "/" },
     { title: "News", href: "/news" },
-    { title: "Artikel", href: "/article" },
+    { title: "Artikel", href: "/articles" },
     { title: "About", href: "/about" },
     { title: "E-Learning", href: "https://learn.reddot.site" },
 ];
