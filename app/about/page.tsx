@@ -1,5 +1,6 @@
 import DescriptionSection from "@/components/about/description-section";
 import TitleSection from "@/components/about/title-section";
+import VisimisiSection from "@/components/about/visimisi-section";
 
 export default function AboutPage() {
     return (
@@ -8,6 +9,9 @@ export default function AboutPage() {
             <TitleSection />
 
             <DescriptionSection />
+
+            <VisimisiSection />
+
         </main>
     );
 }

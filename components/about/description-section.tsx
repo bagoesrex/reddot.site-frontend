@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function DescriptionSection() {
     return (
-        <section id="description" className="flex flex-col md:flex-col min-h-[26rem] items-center pb-15 pt-10 px-5 max-w-4xl w-full">
+        <section id="description" className="flex flex-col md:flex-col min-h-[26rem] items-center pb-15 pt-15 px-5 max-w-4xl w-full">
             <div className="flex flex-row w-full">
                 <div className="flex-1/2 justify-center items-center w-full">
                     <Image src="/illustrations/tugu.webp" alt="tugu" width={300} height={300} />
