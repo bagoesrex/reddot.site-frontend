@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="relative flex overflow-hidden flex-col md:flex-col min-h-[26rem] items-center pb-15 pt-20 px-5">
+        <section id="about" className="relative min-w-sm flex overflow-hidden flex-col md:flex-col min-h-[26rem] items-center pb-15 pt-20 px-5">
             <PatternBackground />
             <h2 className="text-2xl md:text-3xl font-extrabold leading-tight mb-10">
                 Tentang
