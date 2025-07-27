@@ -43,10 +43,10 @@ export function Navbar({ isOpen, setIsOpen }: NavbarProps) {
                                             : 'opacity-0 scale-75 -translate-y-1'
                                             }`}
                                     />
-                                    <span className="flex items-center gap-1 justify-center text-background">
+                                    <span className="flex items-center gap-1 justify-center text-white">
                                         {title}
                                         {title === "E-Learning" && (
-                                            <ArrowUpRight className="text-background" size={14} />
+                                            <ArrowUpRight className="text-white" size={14} />
                                         )}
                                     </span>
                                 </div>
