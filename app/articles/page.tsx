@@ -1,6 +1,7 @@
 "use client"
 
 import { ArticleCard } from "@/components/articles/article-card";
+import AudioWidget from "@/components/audio/audio-widget";
 import { dummyArticles } from "@/data/dummyArticles";
 import { Article } from "@/types/article";
 import { useState } from "react";
@@ -43,6 +44,10 @@ export default function ArticlesPage() {
                     )}
                 </div>
             </section>
+            <AudioWidget
+                src="/audios/article.mp3"
+                fileName="Tech Village"
+            />
         </main>
     );
 }

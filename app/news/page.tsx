@@ -1,5 +1,6 @@
 "use client"
 
+import AudioWidget from "@/components/audio/audio-widget";
 import { NewsCard } from "@/components/news/news-card";
 import { dummyNews } from "@/data/dummyNews"
 import { News } from "@/types/news";
@@ -48,6 +49,10 @@ export default function NewsPage() {
                     )}
                 </div>
             </section>
+            <AudioWidget
+                src="/audios/news.mp3"
+                fileName="Cinematic"
+            />
         </main>
     );
 }
