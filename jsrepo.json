@@ -8,6 +8,6 @@
 	"watermark": true,
 	"configFiles": {},
 	"paths": {
-		"*": "./app/components/reactbits"
+		"*": "./components/reactbits"
 	}
 }

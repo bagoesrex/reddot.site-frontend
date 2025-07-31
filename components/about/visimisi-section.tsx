@@ -8,7 +8,7 @@ export default function VisimisiSection() {
                 <h3 className="text-xl md:text-2xl font-extrabold leading-tight mb-2">
                     Our Vision and Mission
                 </h3>
-                <h4 className="text-xs md:text-sm text-center italic bg-gray-400 rounded-br-md rounded-tl-md py-1 px-2 mb-10 text-background">
+                <h4 className="text-xs md:text-sm text-center italic bg-gray-400 rounded-br-md rounded-tl-md py-1 px-2 mb-10 text-white">
                     Membangun komunitas teknologi inklusif untuk mendorong inovasi, edukasi, dan AI yang etis.
                 </h4>
 

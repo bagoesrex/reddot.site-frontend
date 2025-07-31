@@ -5,7 +5,7 @@ import AudioWidget from "@/components/audio/audio-widget";
 
 export default function AboutPage() {
     return (
-        <main className="w-full flex flex-col justify-center items-center pb-20">
+        <main className="flex flex-col justify-center items-center">
 
             <TitleSection />
 

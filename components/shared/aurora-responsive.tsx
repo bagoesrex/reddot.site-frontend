@@ -1,6 +1,6 @@
 "use client";
 
-import Aurora from "@/app/components/reactbits/Backgrounds/Aurora/Aurora";
+import Aurora from "@/components/reactbits/Backgrounds/Aurora/Aurora";
 import { useEffect, useState } from "react";
 
 function useIsMobile() {
