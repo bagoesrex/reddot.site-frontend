@@ -28,11 +28,11 @@ export function NewsCard({ news }: Props) {
                     <div className="flex flex-row items-center gap-3 text-gray-500">
                         <div className="flex flex-row items-center gap-1">
                             <Calendar size={15} />
-                            <p className="text-sm">{news.publishedAt}</p>
+                            <p className="text-xs">{news.publishedAt}</p>
                         </div>
                         <div className="flex flex-row items-center gap-1">
                             <UserRound size={15} />
-                            <p className="text-sm">{news.author}</p>
+                            <p className="text-xs">{news.author}</p>
                         </div>
                     </div>
                     <p className="text-sm text-gray-700 line-clamp-3">{news.content}</p>
