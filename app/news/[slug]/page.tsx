@@ -14,7 +14,7 @@ export default async function NewsDetailPage({
     if (!news) return notFound();
 
     return (
-        <main className="flex flex-col items-center px-4 py-24 min-h-svh pt-[80px]">
+        <main className="flex flex-col items-center px-4 py-24 min-h-svh pt-[130px]">
             <article className="max-w-3xl w-full">
                 <h1 className="text-4xl font-bold mb-4">{news.title}</h1>
 
