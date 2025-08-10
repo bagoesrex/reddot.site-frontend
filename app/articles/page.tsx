@@ -7,7 +7,7 @@ import { Article } from "@/types/article";
 import { useState } from "react";
 
 export default function ArticlesPage() {
-    const [search] = useState("");
+    const [search, setSearch] = useState("");
 
     const filteredArticles = dummyArticles.filter((item: Article) =>
         item.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -26,9 +26,13 @@ export default function ArticlesPage() {
                         Temukan berita terbaru seputar kecerdasan buatan, teknologi, dan inovasi masa depan.
                         Dapatkan update terkini tentang perkembangan AI, riset terbaru, dan penerapannya dalam berbagai aspek kehidupan.
                     </p>
-                    <h3 className="mt-6 w-full px-4 py-2 text-center" >
-                        Todo Filter
-                    </h3>
+                    <input
+                        type="text"
+                        placeholder="Cari article berdasarkan judul, isi, atau penulis..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="mt-6 w-full px-4 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-black transition"
+                    />
                 </div>
                 <div className="flex flex-row gap-10 max-w-4xl mx-auto">
                     {filteredArticles.length > 0 ? (
@@ -39,7 +43,7 @@ export default function ArticlesPage() {
                         </div>
                     ) : (
                         <div className="w-full text-center text-gray-600 text-lg mt-10">
-                            Tidak ditemukan berita yang sesuai.
+                            Tidak ditemukan article yang sesuai.
                         </div>
                     )}
                 </div>
