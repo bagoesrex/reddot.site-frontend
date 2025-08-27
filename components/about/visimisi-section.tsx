@@ -5,10 +5,10 @@ export default function VisimisiSection() {
         <section id="visimisi" className="flex flex-col md:flex-col min-h-[26rem] bg-gray-200 items-center pb-15 pt-10 px-5 w-full">
             <div className="max-w-4xl flex flex-col justify-center items-center">
 
-                <h3 className="text-xl md:text-2xl font-extrabold leading-tight mb-2">
+                <h3 className="text-2xl md:text-3xl font-extrabold leading-tight mb-2">
                     Our Vision and Mission
                 </h3>
-                <h4 className="text-xs md:text-sm text-center italic bg-gray-400 rounded-br-md rounded-tl-md py-1 px-2 mb-10 text-white">
+                <h4 className="text-sm md:text-sm text-center italic bg-gray-400 rounded-br-md rounded-tl-md py-1 px-2 md:mb-10 text-white">
                     Membangun komunitas teknologi inklusif untuk mendorong inovasi, edukasi, dan AI yang etis.
                 </h4>
 

@@ -26,19 +26,19 @@ const visimisiItems = [
 
 export default function VisimisiCard() {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center">
             {visimisiItems.map((category, index) => {
                 return (
                     <Card
                         key={index}
                         className="bg-transparent w-full p-0 m-0 max-w-md border-none shadow-none transition"
                     >
-                        <CardContent className="p-6 space-y-4">
+                        <CardContent className="p-3 md:space-y-4 flex justify-center items-center flex-col">
                             <div className="p-5 md:p-1">
-                                <Image src={category.icon} alt={category.title} width={300} height={300} />
+                                <Image src={category.icon} alt={category.title} width={200} height={200} />
                             </div>
                             <h5 className="text-md font-semibold text-gray-900">{category.title}</h5>
-                            <p className="text-sm text-gray-700">{category.description}</p>
+                            <p className="text-sm text-gray-700 text-center">{category.description}</p>
                         </CardContent>
                     </Card>
                 )
