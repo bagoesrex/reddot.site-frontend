@@ -16,7 +16,7 @@ export default async function ArticleDetailPage({
     return (
         <main className="flex flex-col items-center px-4 py-24 min-h-svh pt-[130px]">
             <article className="max-w-3xl w-full">
-                <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
+                <h1 className="text-2xl md:text-3xl font-bold mb-4">{article.title}</h1>
 
                 <div className="flex items-center gap-4 text-gray-500 text-sm mb-6">
                     <div className="flex items-center gap-1">
