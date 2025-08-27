@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section id="hero" className="flex flex-col min-h-svh md:flex-row justify-center items-center gap-2 bg-background pb-15 pt-[100px] md:pt-[120px]">
+        <section id="hero" className="flex flex-col min-h-svh md:flex-row justify-center items-center gap-2 bg-background pb-15 pt-[110px] md:pt-[120px]">
             <div className="max-w-xl text-center md:text-left px-5">
                 <motion.h1
                     initial={{ opacity: 0, y: -50 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             </div>
 
             <motion.div
-                className="w-[300px] aspect-[1/1]"
+                className="w-[300px] aspect-[1/1] flex flex-col gap-5 justify-center items-center"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}

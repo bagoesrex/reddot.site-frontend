@@ -123,7 +123,7 @@
 }
 
 .heading-main {
-  @apply text-4xl md:text-5xl font-extrabold leading-tight;
+  @apply text-3xl md:text-5xl font-extrabold leading-tight;
 }
 
 body.menu-open {
